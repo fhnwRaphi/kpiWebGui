@@ -7,7 +7,7 @@ var server = http.createServer(function(request, response) {
 
     var filePath = '.' + request.url;
     if (filePath == './')
-        filePath = './pic/test.jpg';
+        filePath = './pic/test.png';
 
     var extname = path.extname(filePath);
     var contentType = 'text/html';
