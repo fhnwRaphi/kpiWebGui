@@ -1,0 +1,32 @@
+﻿// Lodash Doku: https://lodash.com/docs
+// Lodash installieren: npm install --save lodash
+var _ = require('lodash');
+
+var studentsWithNameMartin = _.filter(students, function(student) {
+	return _.isEqual(student.name, 'martin');
+});
+
+
+var mytext = '{"name": "max"}';
+var json = JSON.parse(mytext);
+var name = json.name;
+console.log("name is: ", name);
+
+var myStudent = {
+	name: 'max müller'
+};
+console.log("name: ", myStudent.name);
+
+
+var students = [{name: 'martin'}, {name: 'max'}, {name: 'bruno'}, {name: 'hansueli'}];
+
+var hasFridolin = _.some(students, function(s) { return s.name === 'Fridolin'}); 
+// hasFridolin is a boolean
+
+// Momentjs Doku: http://momentjs.com/docs
+// Momentjs installieren: npm install --save momentjs
+var moment = require('moment');
+var stringdate = '2017-10-10 20:09:35';
+var myDate = moment(stringdate);
+console.log(myDate.format('dd DD.MM.YYYY HH:mm:ss'));
+console.log("Heute ist " + moment().format('dd DD.MM.YYYY HH:mm:ss'));
